@@ -58,8 +58,10 @@ public class RomanNumeral
         if(length == 4)
         {
             int first_number = number/1000;
-            if(first_number < 3)
+            if(first_number <= 4)
                 roman += "M".repeat(first_number);
+            else
+                System.out.println("Za duża liczba");
             number %= 1000;
             threeDigits(number);
         }
