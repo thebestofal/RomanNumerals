@@ -7,18 +7,18 @@ public class RomanNumeral
     {
         this.number = number;
         int length = String.valueOf(number).length();
-        if(number<50)
+        if(number < 100000)
         {
-            if(number/10==4)
-                roman += "XL";
-            else
-            {
                 int last_number = number % 10;
                 number = number/10;
                 if(number < 2)
                     roman = "I".repeat(number);
-                else
+                else if(number < 4)
                     roman += "X".repeat(number);
+                else if(number == 4)
+                    roman += "XL";
+                else if(number == 5)
+                    roman += "L";
                 if(last_number == 5)
                     roman += "V";
                 else if(last_number < 5)
@@ -35,7 +35,6 @@ public class RomanNumeral
                     else
                         roman += "V"+"I".repeat(last_number%5);
                 }
-            }
         }
     }
     

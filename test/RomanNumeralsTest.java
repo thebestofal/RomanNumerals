@@ -55,21 +55,18 @@ public class RomanNumeralsTest {
         assertEquals("XXVII", romanNumeral.getRomanNumeral());
     }
     
-    @Ignore("Remove to run test")
     @Test
     public void test48ToRomanNumberXLVIII() {
         romanNumeral = new RomanNumeral(48);
         assertEquals("XLVIII", romanNumeral.getRomanNumeral());
     }
     
-    @Ignore("Remove to run test")
     @Test
     public void test49ToRomanNumberXLIX() {
         romanNumeral = new RomanNumeral(49);
         assertEquals("XLIX", romanNumeral.getRomanNumeral());
     }
     
-    @Ignore("Remove to run test")
     @Test
     public void test59ToRomanNumberLIX() {
         romanNumeral = new RomanNumeral(59);
