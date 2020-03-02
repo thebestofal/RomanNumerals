@@ -19,6 +19,8 @@ public class RomanNumeral
                     roman += "XL";
                 else if(number == 5)
                     roman += "L";
+                else if(number == 9)
+                    roman += "XC";
                 if(last_number == 5)
                     roman += "V";
                 else if(last_number < 5)
