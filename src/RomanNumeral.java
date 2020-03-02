@@ -7,9 +7,7 @@ public class RomanNumeral
     {
         int last_number = number % 10;
         number = number/10;
-        if(number < 2)
-            roman += "I".repeat(number);
-        else if(number < 4)
+        if(number < 4)
             roman += "X".repeat(number);
         else if(number == 4)
             roman += "XL";
@@ -51,6 +49,8 @@ public class RomanNumeral
                 roman += "D";
             else if(first_number >= 6 && first_number<=8)
                 roman += "D"+"C".repeat(first_number%5);
+            else if(first_number == 9)
+                roman += "CM";
             number %= 100;
             smallnumber(number);
         }
