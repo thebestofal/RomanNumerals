@@ -2,7 +2,7 @@
 public class RomanNumeral
 {
     int number;
-    String roman;
+    String roman = "";
     public RomanNumeral(int number)
     {
         this.number = number;
@@ -10,12 +10,15 @@ public class RomanNumeral
         if(number<50)
         {
             if(number/10==4)
-                System.out.println(4);
+                roman += "XL";
             else
             {
                 int last_number = number % 10;
                 number = number/10;
-                roman = "I".repeat(number);
+                if(number < 2)
+                    roman = "I".repeat(number);
+                else
+                    roman += "X".repeat(number);
                 if(last_number == 5)
                     roman += "V";
                 else if(last_number < 5)
