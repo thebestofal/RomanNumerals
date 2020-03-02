@@ -8,13 +8,15 @@ public class RomanNumeral
         int last_number = number % 10;
         number = number/10;
         if(number < 2)
-            roman = "I".repeat(number);
+            roman += "I".repeat(number);
         else if(number < 4)
             roman += "X".repeat(number);
         else if(number == 4)
             roman += "XL";
         else if(number == 5)
             roman += "L";
+        else if(number >= 6 && number <= 8)
+            roman += "L"+"X".repeat(number%5);
         else if(number == 9)
             roman += "XC";
         if(last_number == 5)
@@ -47,6 +49,8 @@ public class RomanNumeral
                 roman += "CD";
             else if(first_number == 5)
                 roman += "D";
+            else if(first_number >= 6 && first_number<=8)
+                roman += "D"+"C".repeat(first_number%5);
             number %= 100;
             smallnumber(number);
         }
